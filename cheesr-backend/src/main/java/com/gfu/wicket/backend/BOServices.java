@@ -48,7 +48,14 @@ public class BOServices {
 	 * @param cart
 	 */
 	public void proccessOrder(Cart cart){
-		// Nichts passiert - das ist im Beispiel so.
+		// Nichts passiert - das ist im Beispiel so. - Loggen:
+		System.err.println(">>>> Start: Bearbeite Bestellung <<<<<");
+		System.err.println(cart.getBillingAddress().toString());
+		for(Cheese c : cart.getCheeses()){
+			System.err.println(c.toString());
+		}
+		System.err.println(">>>> Ende: Bearbeite Bestellung <<<<<");
+		
 	}
 
 	public static BOServices get(){
