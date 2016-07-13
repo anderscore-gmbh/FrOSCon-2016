@@ -35,52 +35,36 @@
 	</nav>
 
 	<div class="container">
-		<div class="col-md-6">
-			<h2>Our Selection</h2>
-			<div wicket:id="cheeses" class="cheese">
-				<h3 wicket:id="name">Gouda</h3>
-				<p wicket:id="description">Gouda is a Dutch...</p>
-				<p>
-					<span wicket:id="price">$1.99</span> <a wicket:id="add" href="#">add to cart</a>
-				</p>
-			</div>
-<wicket:remove>
-			<div class="cheese">
-				<h3>Emmental</h3>
-				<p>Emmental is a Swiss che...</p>
-				<p>
-					<span>$2.99</span> <a href="#">add to cart</a>
-				</p>
-			</div>
-</wicket:remove>
-		</div>
+		<form>
+			<h3>Check out</h3>
+			<p>Please enter your billing address.</p>
 
-		<div class="col-md-6">
-			<h2>Your Choice</h2>
-			<table class="table">
-				<tbody>
-					<tr>
-						<td>Gouda</td>
-						<td>$ 2.99</td>
-						<td><a href="#">remove</a></td>
-					</tr>
-					<tr>
-						<td>Emmental</td>
-						<td>$ 1.99</td>
-						<td><a href="#">remove</a></td>
-					</tr>
-				</tbody>
-				<tfoot>
-					<tr class="total">
-						<th>Total</th>
-						<td>$ 4.98</td>
-						<td>&nbsp;</td>
-					</tr>
-				</tfoot>
-			</table>
-			<input type="button" value="Check out"></input>
-		</div>
+			<div class="form-group">
+				<label for="name">Name</label> <input name="name" type="text"
+					class="form-control" placeholder="name" />
+			</div>
+			<div class="form-group">
+				<label for="street">Street</label> <input name="street" type="text"
+					class="form-control" placeholder="street" />
+			</div>
+
+			<div class="form-group">
+				<label for="zipcode">Zip code</label> <input name="zipcode"
+					type="text" class="form-control" placeholder="zip code" />
+			</div>
+
+			<div class="form-group">
+				<label for="city">City</label> <input name="city" type="text"
+					class="form-control" placeholder="city" />
+			</div>
+			<input type="button"value="Cancel" /> 
+			<input type="submit" value="Order!" />
+			</td>
+		</form>
+
 	</div>
 	<!-- /.container -->
+
+
 </body>
 </html>

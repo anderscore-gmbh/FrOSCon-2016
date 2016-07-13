@@ -50,4 +50,8 @@ public class BOServices {
 	public void proccessOrder(Cart cart){
 		// Nichts passiert - das ist im Beispiel so.
 	}
+
+	public static BOServices get(){
+		return new BOServices();
+	}
 }
