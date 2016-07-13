@@ -36,44 +36,30 @@
 
 	<div class="container">
 		<div class="col-md-6">
-			<div wicket:id="feedback">Feedback</div>
-
-			<form wicket:id="form">
-				<h2>Check out</h2>
-				<p>Please enter your billing address.</p>
-
-				<div class="form-group">
-					<label for="name">Name</label> <input wicket:id="name" name="name"
-						type="text" class="form-control" placeholder="name" />
-				</div>
-				<div class="form-group">
-					<label for="street">Street</label> <input wicket:id="street"
-						name="street" type="text" class="form-control"
-						placeholder="street" />
-				</div>
-
-				<div class="form-group">
-					<label for="zipcode">Zip code</label> <input wicket:id="zipcode"
-						name="zipcode" type="text" class="form-control"
-						placeholder="zip code" />
-				</div>
-
-				<div class="form-group">
-					<label for="city">City</label> <input wicket:id="city" name="city"
-						type="text" class="form-control" placeholder="city" />
-				</div>
-				<input wicket:id="cancel" type="button" value="Cancel" /> <input
-					wicket:id="order" type="submit" value="Order!" />
-			</form>
-
+			<h2>Our Selection</h2>
+			<div wicket:id="cheeses" class="cheese">
+				<h3 wicket:id="name">Gouda</h3>
+				<p wicket:id="description">Gouda is a Dutch...</p>
+				<p>
+					<span wicket:id="price">$1.99</span> <a wicket:id="add" href="#">add to cart</a>
+				</p>
+			</div>
+<wicket:remove>
+			<div class="cheese">
+				<h3>Emmental</h3>
+				<p>Emmental is a Swiss che...</p>
+				<p>
+					<span>$2.99</span> <a href="#">add to cart</a>
+				</p>
+			</div>
+</wicket:remove>
 		</div>
+
 		<div class="col-md-6">
-			<div wicket:id="cart"></div>
+		<div wicket:id="cart"></div>
+			<input wicket:id="checkout" type="button" value="Check out"></input>
 		</div>
-
 	</div>
 	<!-- /.container -->
-
-
 </body>
 </html>
