@@ -8,7 +8,7 @@ public class Cart implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	private List<Cheese> cheeses = new ArrayList<>();
+	private List<Cheese> cheeses = new ArrayList<Cheese>();
 	
 	private Address billingAddress = new Address();
 	public List<Cheese> getCheeses() {
