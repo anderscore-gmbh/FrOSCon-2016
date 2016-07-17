@@ -24,7 +24,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/jan/workspace-wicket-training/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf353682069348414171.tmp"/>
+    <property name="classworlds.conf" value="/home/jan/workspace-wicket-training/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf3642910865469599616.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -59,6 +59,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.gfu.wicket.backend.BOServiceTest" name="testAllCheesesOk" time="0.001"/>
-  <testcase classname="com.gfu.wicket.backend.BOServiceTest" name="testOrderPlace" time="0.001"/>
+  <testcase classname="com.gfu.wicket.backend.BOServiceTest" name="testAllCheesesOk" time="0.002"/>
+  <testcase classname="com.gfu.wicket.backend.BOServiceTest" name="testOrderPlace" time="0"/>
 </testsuite>

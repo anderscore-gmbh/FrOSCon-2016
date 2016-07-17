@@ -4,9 +4,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import javax.annotation.ManagedBean;
+import javax.management.MXBean;
+
 import com.gfu.wicket.backend.bo.Cart;
 import com.gfu.wicket.backend.bo.Cheese;
-
+@ManagedBean
 public class BOServices {
 	
 	private final List<Cheese> cheeses = Arrays.asList(
