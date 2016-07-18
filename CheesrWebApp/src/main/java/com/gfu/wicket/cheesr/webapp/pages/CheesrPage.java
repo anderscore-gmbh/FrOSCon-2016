@@ -12,5 +12,4 @@ public abstract class CheesrPage extends WebPage {
 	public Cart getCart(){
 		return ((CheesrSession)getSession()).getCart();
 	}
-
 }

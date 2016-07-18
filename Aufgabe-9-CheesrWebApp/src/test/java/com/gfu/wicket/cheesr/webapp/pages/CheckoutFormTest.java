@@ -57,7 +57,7 @@ public class CheckoutFormTest {
 	@Test
 	public void testOrderSuccess(){
 	    formTester.setValue("city", "Musterstadt");
-	    formTester.submit();
+	    formTester.submit("order");
 	    
 	    tester.assertNoErrorMessage();
 	}

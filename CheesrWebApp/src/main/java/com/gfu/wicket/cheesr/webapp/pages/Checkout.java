@@ -18,7 +18,7 @@ import com.gfu.wicket.cheesr.webapp.components.CooperateFeedbackPanel;
 import com.gfu.wicket.cheesr.webapp.components.RequiredFieldBehaviour;
 import com.gfu.wicket.cheesr.webapp.components.ShoppingCartPanel;
 
-public class Checkout extends CheesrPage  implements AuthenticatedWebPage{
+public class Checkout extends CheesrPage {
 
 	private static final long serialVersionUID = 1L;
 	
