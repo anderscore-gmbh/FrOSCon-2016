@@ -91,6 +91,15 @@
 			<version>${jetty9.version}</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<!--  Backend dependency -->
+		<dependency>
+			<groupId>com.gfu.wicket.backend</groupId>
+			<artifactId>cheesr-backend</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		
+		
 	</dependencies>
 	<build>
 		<resources>

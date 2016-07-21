@@ -52,12 +52,12 @@ public class BOServices {
 	 */
 	public void proccessOrder(Cart cart){
 		// Nichts passiert - das ist im Beispiel so. - Loggen:
-		System.err.println(">>>> Start: Bearbeite Bestellung <<<<<");
-		System.err.println(cart.getBillingAddress().toString());
+		System.out.println(">>>> Start: Bearbeite Bestellung <<<<<");
+		System.out.println(cart.getBillingAddress().toString());
 		for(Cheese c : cart.getCheeses()){
-			System.err.println(c.toString());
+			System.out.println(c.toString());
 		}
-		System.err.println(">>>> Ende: Bearbeite Bestellung <<<<<");
+		System.out.println(">>>> Ende: Bearbeite Bestellung <<<<<");
 		
 	}
 

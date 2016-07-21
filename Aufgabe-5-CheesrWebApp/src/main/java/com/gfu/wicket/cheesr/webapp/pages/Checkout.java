@@ -4,21 +4,31 @@ import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.link.Link;
+import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
 
 import com.gfu.wicket.backend.BOServices;
 import com.gfu.wicket.backend.bo.Address;
 import com.gfu.wicket.backend.bo.Cart;
+import com.gfu.wicket.cheesr.webapp.validators.SimpleCustomValidator;
 
 public class Checkout extends CheesrPage {
 
 	private static final long serialVersionUID = 1L;
 
 	public Checkout() {
+		
 		Form<Address> form = new Form<Address>("form");
-		add(form);
+		form.add(new FeedbackPanel("feedback")); // feedbackPanel for validationMessages
+		
 		Address address = getCart().getBillingAddress();
-		form.add(new TextField<String>("name", new PropertyModel<String>(address, "name")));
+		
+		TextField<String> nameTextField = new TextField<String>("name", new PropertyModel<String>(address, "name"));
+		nameTextField.add(new SimpleCustomValidator("name"));
+		nameTextField.setRequired(false); // Alternative: implement INullAcceptingValidator custom validator
+		form.add(nameTextField);
+		
+		
 		form.add(new TextField<String>("street", new PropertyModel<String>(address, "street")));
 		form.add(new TextField<String>("zipcode", new PropertyModel<String>(address, "zipcode")));
 		form.add(new TextField<String>("city", new PropertyModel<String>(address, "city")));
@@ -40,5 +50,7 @@ public class Checkout extends CheesrPage {
 				setResponsePage(Index.class);
 			};
 		});
+		
+		add(form);
 	}
 }

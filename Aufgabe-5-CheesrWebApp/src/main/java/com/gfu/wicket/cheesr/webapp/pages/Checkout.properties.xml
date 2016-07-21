@@ -1,0 +1,15 @@
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="tooShort">Bitte geben Sie mindestens 2 Zeichen ein</entry>
+  
+  <!-- If required(false) is set and INullAcceptingValidator is implemented by Validator class -->
+  <entry key="notEmpty">Bitte geben Sie einen Wert ein</entry>
+  
+  <!-- If required(true) is set -->
+  <entry key="form.name.Required">Bitte geben sie einen Namen an.</entry>
+  
+  <!-- Mit Bezug zum Feldnamen -->
+  <entry key="name.tooShort">Bitte geben Sie mindestens 2 Zeichen im Feld "Name" ein</entry>
+  <entry key="name.notEmpty">Bitte geben Sie einen Wert im Feld "Name" ein</entry>
+  
+</properties>
