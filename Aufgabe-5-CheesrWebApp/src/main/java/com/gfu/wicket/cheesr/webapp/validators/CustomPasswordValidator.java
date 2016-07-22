@@ -9,23 +9,25 @@ import org.apache.wicket.validation.ValidationError;
 
 public class CustomPasswordValidator implements IValidator<String> {
 
-	private final String PASSWORD_PATTERN = "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})";
+	private static final long serialVersionUID = 6914956587601132034L;
+
+	private final String PASSWORD_PATTERN = "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})";
 	
-	/*(			# Start of group
+	/*(		   # Start of group
 			  (?=.*\d)		#   must contains one digit from 0-9
 			  (?=.*[a-z])		#   must contains one lowercase characters
 			  (?=.*[A-Z])		#   must contains one uppercase characters
-			  (?=.*[@#$%])		#   must contains one special symbols in the list "@#$%"
 			              .		#     match anything with previous condition checking
 			                {6,20}	#        length at least 6 characters and maximum of 20	
-			)			# End of group
+			) # End of group
 			?= – means apply the assertion condition, meaningless by itself, always work with other combination
 
-			Whole combination is means, 6 to 20 characters string with at least one digit, one upper case letter, one lower case letter and one special symbol (“@#$%”). This regular expression pattern is very useful to implement a strong and complex password.
-*/
+			6 to 20 characters string with at least one digit, one upper case letter, one lower case letter
+	*/
+	
 	private final Pattern pattern;
 
-	CustomPasswordValidator() {
+	public CustomPasswordValidator() {
 		pattern = Pattern.compile(PASSWORD_PATTERN);
 	}
 
@@ -42,7 +44,7 @@ public class CustomPasswordValidator implements IValidator<String> {
 
 	private void error(IValidatable<String> validatable, String errorKey) {
 
-		System.err.println("<SimpleCustomValidator>: Password validation error! ");
+		System.err.println("<CustomPasswordValidator>: Password validation error! ");
 		ValidationError error = new ValidationError();
 		error.addKey(errorKey);
 		validatable.error(error);

@@ -5,11 +5,21 @@
   <!-- If required(false) is set and INullAcceptingValidator is implemented by Validator class -->
   <entry key="notEmpty">Bitte geben Sie einen Wert ein</entry>
   
-  <!-- If required(true) is set -->
+  <!-- If required(true) is set, überschreibe die Standardmeldung (Bitte tragen sie einen Wert im Feld ... ein)  -->
   <entry key="form.name.Required">Bitte geben sie einen Namen an.</entry>
+  <entry key="form.city.Required">Bitte geben Sie eine Stadt an</entry>
   
-  <!-- Mit Bezug zum Feldnamen -->
+  <!-- Property Keys für SimpleCustomValidator -->
   <entry key="name.tooShort">Bitte geben Sie mindestens 2 Zeichen im Feld "Name" ein</entry>
   <entry key="name.notEmpty">Bitte geben Sie einen Wert im Feld "Name" ein</entry>
   
+  <entry key="street.tooShort">Bitte geben Sie mindestens 2 Zeichen im Feld "Street" ein</entry>
+  <entry key="street.notEmpty">Bitte geben Sie einen Wert im Feld "Street" ein</entry>
+  
+  <entry key="zipcode.tooShort">Bitte geben Sie mindestens 2 Zeichen im Feld "Zip code" ein</entry>
+  <entry key="zipcode.notEmpty">Bitte geben Sie einen Wert im Feld "Zip code" ein</entry>
+  
+  <!-- Property Keys für CustomPasswordValidator -->
+  <entry key="password.weakPassword">"Password" muss 6-20 Zeichen lang sein, mit mind. einem Groß- und Kleinbuchstaben und einer Zahl</entry>
+  <entry key="repeat-password.weakPassword">"Password (repeat)" muss 6-20 Zeichen lang sein, mit mind. einem Groß- und Kleinbuchstaben und einer Zahl</entry>
 </properties>
