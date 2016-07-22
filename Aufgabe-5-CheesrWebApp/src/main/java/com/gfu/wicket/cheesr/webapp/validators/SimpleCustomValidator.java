@@ -31,7 +31,6 @@ public class SimpleCustomValidator implements IValidator<String>, INullAccepting
 		
 		if(value != null && value.length() < 2)
 		{
-			// Message from key "SimpleCustomValidator.tooShort"
 			System.err.println("<SimpleCustomValidator>: Validating... ");
 			error(validatable, "tooShort");
 		}
