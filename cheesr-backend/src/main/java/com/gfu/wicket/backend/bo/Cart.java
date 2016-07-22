@@ -10,17 +10,17 @@ public class Cart implements Serializable{
 	
 	private List<Cheese> cheeses = new ArrayList<Cheese>();
 	
-	private Address billingAddress = new Address();
+	private UserInfo billingAddress = new UserInfo();
 	public List<Cheese> getCheeses() {
 		return cheeses;
 	}
 	public void setCheeses(List<Cheese> cheeses) {
 		this.cheeses = cheeses;
 	}
-	public Address getBillingAddress() {
+	public UserInfo getBillingAddress() {
 		return billingAddress;
 	}
-	public void setBillingAddress(Address billingAddress) {
+	public void setBillingAddress(UserInfo billingAddress) {
 		this.billingAddress = billingAddress;
 	}
 	

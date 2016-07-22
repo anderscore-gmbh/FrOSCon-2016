@@ -6,8 +6,8 @@
   <entry key="notEmpty">Bitte geben Sie einen Wert ein</entry>
   
   <!-- If required(true) is set, überschreibe die Standardmeldung (Bitte tragen sie einen Wert im Feld ... ein)  -->
-  <entry key="form.name.Required">Bitte geben sie einen Namen an.</entry>
-  <entry key="form.city.Required">Bitte geben Sie eine Stadt an</entry>
+  <!-- <entry key="form.name.Required">Bitte geben sie einen Namen an.</entry>
+  <entry key="form.city.Required">Bitte geben Sie eine Stadt an.</entry> -->
   
   <!-- Property Keys für SimpleCustomValidator -->
   <entry key="name.tooShort">Bitte geben Sie mindestens 2 Zeichen im Feld "Name" ein</entry>
@@ -22,4 +22,9 @@
   <!-- Property Keys für CustomPasswordValidator -->
   <entry key="password.weakPassword">"Password" muss 6-20 Zeichen lang sein, mit mind. einem Groß- und Kleinbuchstaben und einer Zahl</entry>
   <entry key="repeat-password.weakPassword">"Password (repeat)" muss 6-20 Zeichen lang sein, mit mind. einem Groß- und Kleinbuchstaben und einer Zahl</entry>
+  
+  <!-- Property für EqualPasswordInputValidator -->
+  <!-- <entry key="repeat-password.EqualPasswordInputValidator">Passwörter stimmen nicht überein!</entry> -->
+  
+  
 </properties>
