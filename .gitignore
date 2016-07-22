@@ -1,0 +1,25 @@
+# General
+bin/
+tmp/
+*.jar
+*.war
+*.ear
+*.class
+*.tmp
+*.bak
+
+# Maven
+target/
+log/
+
+# Eclipse
+.settings/
+.project
+.classpath
+.metadata
+local.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
