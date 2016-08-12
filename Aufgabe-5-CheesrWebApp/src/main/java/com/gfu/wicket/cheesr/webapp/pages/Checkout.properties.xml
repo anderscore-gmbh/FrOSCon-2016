@@ -16,15 +16,17 @@
   <entry key="street.tooShort">Bitte geben Sie mindestens 2 Zeichen im Feld "Street" ein</entry>
   <entry key="street.notEmpty">Bitte geben Sie einen Wert im Feld "Street" ein</entry>
   
-  <entry key="zipcode.tooShort">Bitte geben Sie mindestens 2 Zeichen im Feld "Zip code" ein</entry>
-  <entry key="zipcode.notEmpty">Bitte geben Sie einen Wert im Feld "Zip code" ein</entry>
+  <entry key="zipcode.PatternValidator">PLZ muss aus 5 Ziffern bestehen (Geprüftes Pattern ist ${pattern})</entry>
   
   <!-- Property Keys für CustomPasswordValidator -->
   <entry key="password.weakPassword">"Password" muss 6-20 Zeichen lang sein, mit mind. einem Groß- und Kleinbuchstaben und einer Zahl</entry>
   <entry key="repeat-password.weakPassword">"Password (repeat)" muss 6-20 Zeichen lang sein, mit mind. einem Groß- und Kleinbuchstaben und einer Zahl</entry>
   
   <!-- Property für EqualPasswordInputValidator -->
-  <!-- <entry key="repeat-password.EqualPasswordInputValidator">Passwörter stimmen nicht überein!</entry> -->
-  
+  <!--   <entry key="repeat-password.EqualPasswordInputValidator">Passwörter stimmen nicht überein!</entry> -->
+
+	<!-- Property Keys für EmailAddressValidator -->
+  <!-- <entry key="EmailAddressValidator">Netter Versuch - doch dies ist keine gültige E-Mail!</entry> -->
+	  
   
 </properties>

@@ -9,6 +9,8 @@ import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
+import org.apache.wicket.util.parse.metapattern.MetaPattern;
+import org.apache.wicket.validation.validator.EmailAddressValidator;
 import org.apache.wicket.validation.validator.PatternValidator;
 import org.apache.wicket.validation.validator.StringValidator;
 
@@ -28,8 +30,6 @@ public class Checkout extends CheesrPage {
 		form.add(new FeedbackPanel("feedback")); // feedbackPanel for validationMessages
 		
 		UserInfo address = getCart().getBillingAddress();
-		
-		// TODO zipcode field only 5 digits
 		
 		TextField<String> name = new TextField<String>("name", new PropertyModel<String>(address, "name"));
 		TextField<String> street = new TextField<String>("street", new PropertyModel<String>(address, "street"));
@@ -53,16 +53,28 @@ public class Checkout extends CheesrPage {
 		
 		name.add(new SimpleCustomValidator("name")); 
 		street.add(new SimpleCustomValidator("street")); 
-		zipcode.add(new SimpleCustomValidator("zipcode"));
-		city.add(new StringValidator(2, 25)); // alternative: use StringValidator for min/max length validation
-		// TODO add validator for email
+		
+		// zipcode field only 5 digits (Fehlermeldung in properties anpassen)
+//		PatternValidator zipcodeValidator = new PatternValidator("\\d{1,5}");
+		// alternatively use MetaPattern:
+		PatternValidator zipcodeValidator = new PatternValidator(
+				new MetaPattern(
+						MetaPattern.DIGITS,
+						new MetaPattern("{1,5}")
+				)
+			); 
+				
+		zipcode.add(zipcodeValidator);
+		
+		city.add(new StringValidator(2, 25)); // use StringValidator for min/max length validation
+		email.add(EmailAddressValidator.getInstance());
+		
 		password.add(new CustomPasswordValidator()); 
-//		repeatPassword.add(new CustomPasswordValidator());
+		repeatPassword.add(new CustomPasswordValidator());
+		// alternatively use PatternValidator
+//		repeatPassword.add(new PatternValidator("((?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})"));
 		
 		form.add(new EqualPasswordInputValidator(password, repeatPassword));
-		
-		// alternatively use PatternValidator
-		repeatPassword.add(new PatternValidator("((?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})"));
 		
 		form.add(name);
 		form.add(street);

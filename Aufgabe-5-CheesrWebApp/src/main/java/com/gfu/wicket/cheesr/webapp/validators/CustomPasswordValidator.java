@@ -14,11 +14,11 @@ public class CustomPasswordValidator implements IValidator<String> {
 	private final String PASSWORD_PATTERN = "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})";
 	
 	/*(		   # Start of group
-			  (?=.*\d)		#   must contains one digit from 0-9
-			  (?=.*[a-z])		#   must contains one lowercase characters
-			  (?=.*[A-Z])		#   must contains one uppercase characters
-			              .		#     match anything with previous condition checking
-			                {6,20}	#        length at least 6 characters and maximum of 20	
+			  (?=.*\d)			#   must contain one digit from 0-9
+			  (?=.*[a-z])		#   must contain one lowercase characters
+			  (?=.*[A-Z])		#   must contain one uppercase characters
+			       		.		#   match anything with previous condition checking
+		              {6,20}	#        length at least 6 characters and maximum of 20	
 			) # End of group
 			?= – means apply the assertion condition, meaningless by itself, always work with other combination
 

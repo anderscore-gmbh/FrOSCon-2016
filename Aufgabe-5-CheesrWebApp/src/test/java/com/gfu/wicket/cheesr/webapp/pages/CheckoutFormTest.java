@@ -77,5 +77,31 @@ public class CheckoutFormTest {
 	    tester.assertErrorMessages("password und repeat-password müssen gleich sein.");
 	}
 	
-	// TODO test email, test password wrong pattern, test password set when email set...
+	@Test
+	public void testValidPasswordPattern() {
+		
+		String validPassword = "DummyPassword01";
+		formTester.setValue("password", validPassword);
+		formTester.setValue("repeat-password", validPassword);
+		formTester.submit();
+		
+		tester.assertNoErrorMessage();
+	}
+	
+	@Test
+	public void testWrongPasswordPattern() {
+		
+		String wrongPassword = "wrongpassword";
+		formTester.setValue("password", wrongPassword);
+		formTester.setValue("repeat-password", wrongPassword);
+		formTester.submit();
+		
+		tester.assertErrorMessages(
+				"\"Password\" muss 6-20 Zeichen lang sein, mit mind. einem Groß- und Kleinbuchstaben und einer Zahl",
+				"\"Password (repeat)\" muss 6-20 Zeichen lang sein, mit mind. einem Groß- und Kleinbuchstaben und einer Zahl");
+	}
+	
+	// TODO test email, test password set when email set...
+	
+	
 }

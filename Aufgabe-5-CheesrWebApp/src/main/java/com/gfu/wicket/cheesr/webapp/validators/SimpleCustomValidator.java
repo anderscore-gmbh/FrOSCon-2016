@@ -10,7 +10,6 @@ public class SimpleCustomValidator implements IValidator<String>, INullAccepting
 	private String fieldName;
 
 	public SimpleCustomValidator() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public SimpleCustomValidator(String fieldName) {
