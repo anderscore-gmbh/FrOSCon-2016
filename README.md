@@ -1,7 +1,7 @@
 flyway-talk-froscon-16
 =================
 
-This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ FrOSCon Sankt Augustin (2016-08-20) by Sandra Parsick (@sparsick).
+This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ FrOSCon Sankt Augustin (2016-08-20).
 
 Following tools were used in the demonstration:
 - Sonatype Nexus as Maven repository manager
